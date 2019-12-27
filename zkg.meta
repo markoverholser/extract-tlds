@@ -1,0 +1,10 @@
+[package]
+script_dir = scripts
+description = A package to extract from DNS queries the domain, 
+              top-level domain (tld), subdomain, and length of 
+              the components and add them as fields to the DNS
+              log.
+tags = zeek scripting, dns, entropy
+depends = 
+  domain-tld
+  shannon-entropy
