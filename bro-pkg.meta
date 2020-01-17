@@ -7,4 +7,4 @@ description = A package to extract from DNS queries the domain,
 tags = zeek scripting, dns, entropy
 depends = 
   domain-tld
-  shannon-entropy
+  https://github.com/markoverholser/shannon-entropy branch=bro-version
