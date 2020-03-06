@@ -40,10 +40,14 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
 {
   # print "DNS event";
 
+  # Check to see if the c$dns field is present (if it's not, there's no point in continuing)
+  if (! c$dns) {
+    break;
+  }
+
   # Check to see if the query type is one we want to skip
   if (c$dns$qtype_name in unsupported_query_types) {
     # print fmt("Unsupported query type: %s; skipping", c$dns$qtype_name);
-
     break;
   }
 
