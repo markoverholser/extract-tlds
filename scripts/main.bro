@@ -41,7 +41,7 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
   # print "DNS event";
 
   # Check to see if the c$dns field is present (if it's not, there's no point in continuing)
-  if (! c$dns) {
+  if (! c?$dns) {
     break;
   }
 
